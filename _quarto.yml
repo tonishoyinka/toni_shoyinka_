@@ -1,0 +1,74 @@
+# This file controls the settings for your Quarto template from www.marvinschmitt.com
+
+# website settings
+website:
+  title: "Toni Shoyinka"                                # Your name
+  description: "Undergraduate student pursuing Dean's Approved Major in Epidemiology at Case Western Reserve University"   # A brief slogan (optional)
+  image: img/IMG_8445.jpg
+  
+  favicon: img/cake.png
+  
+  # start of the navigation bar at the top of the website
+  navbar:
+    background: maroon
+    pinned: true
+    logo: /img/cake.png
+    
+    # your sub-pages
+    left:
+      - text: "Education and Experience"
+        href: education/edu_index.qmd
+      - text: "Interests"
+        href: interests/interests_index.qmd
+      - text: "CV"
+        href: cv/cv_index.qmd
+      - text: "Blog Post"
+        href: posts/posts_index.qmd
+    
+    # your social media handles
+    right:
+      - icon: linkedin
+        href: https://www.linkedin.com/in/oluwatoni-shoyinka-90b251235/
+      - icon: envelope
+        aria-label: email
+        href: "mailto:tonishoyinka@gmail.com"  
+  
+  
+
+# Don't touch unless you know what you are doing :) ------------
+  search: 
+    location: navbar
+    type: textbox
+  page-footer: 
+    left: |
+      <span class="faux-block">&#169; 2023 Marvin Schmitt CC BY-SA 4.0</span>
+    center: |
+      <span class="faux-block"><a href="https://www.marvinschmitt.com/blog/website-tutorial-quarto/">View the tutorial for this template!</a></span>
+    right: |
+      <span class="faux-block"><a href="https://github.com/marvinschmitt/quarto-website-template/">View source on GitHub</a></span>
+
+project:
+  type: website
+  output-dir: docs
+
+  preview: 
+    port: 22222
+    browser: true
+    watch-inputs: true
+    navigate: true
+
+execute:
+  freeze: true
+
+format:
+  html:
+    fontsize: 1.1em
+    theme: 
+      - pulse
+      - html/styles.scss
+    toc: false
+    code-link: true
+    anchor-sections: true
+    fig-cap-location: margin
+    reference-location: margin
+    footnotes-hover: true
